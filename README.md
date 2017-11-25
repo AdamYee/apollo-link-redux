@@ -32,4 +32,6 @@ const link = ApolloLink.from([
   new ReduxLink(store),
   new HttpLink()
 ]);
+
+const client = new ApolloClient({ link });
 ```
