@@ -1,0 +1,39 @@
+{
+  "name": "apollo-link-redux",
+  "version": "0.1.0",
+  "description": "Dispatches apollo-client 1.0-ish actions.",
+  "keywords": [
+    "apollo",
+    "link",
+    "graphql",
+    "redux"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamYee/apollo-link-redux.git"
+  },
+  "main": "./lib/index.js",
+  "author": {
+    "name": "Adam Yee",
+    "email": "adamjyee@gmail.com"
+  },
+  "license": "ISC",
+  "scripts": {
+    "clean": "rimraf lib/*",
+    "build": "babel src -d lib",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "apollo-utilities": "^1.0.2"
+  },
+  "peerDependencies": {
+    "apollo-link": "^1.0.3",
+    "graphql": "^0.11.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "rimraf": "^2.6.2"
+  }
+}
