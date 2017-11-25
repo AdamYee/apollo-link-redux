@@ -1,6 +1,6 @@
 {
   "name": "apollo-link-redux",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dispatches apollo-client 1.0-ish actions.",
   "keywords": [
     "apollo",
