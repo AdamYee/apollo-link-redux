@@ -5,7 +5,8 @@ Dispatches apollo-client 1.0-ish actions.
 
 While there are still Apollo Client 1.0 applications out there in the wild,
 this provides a little shim to back fill redux actions previously dispatched in
-Apollo Client 1.0 as you [migrate to Apollo Client 2.0](https://www.apollographql.com/docs/react/2.0-migration.html) (for React).
+Apollo Client 1.0 as you [migrate to Apollo Client 2.0](https://www.apollographql.com/docs/react/2.0-migration.html).
+(This is framework agnostic despite the link to React migration docs).
 
 ### Supported Actions
 ```javascript
