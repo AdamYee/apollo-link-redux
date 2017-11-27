@@ -1,5 +1,9 @@
 # apollo-link-redux CHANGELOG
 
+## 0.1.5
+
+* Correctly transpile ESM for `module` entry point
+
 ## 0.1.4
 
 * Whitelist using "files" instead of blacklist using .npmignore

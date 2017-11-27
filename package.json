@@ -1,6 +1,6 @@
 {
   "name": "apollo-link-redux",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Dispatches apollo-client 1.0-ish actions.",
   "keywords": [
     "apollo",
@@ -13,7 +13,6 @@
     "url": "git+https://github.com/AdamYee/apollo-link-redux.git"
   },
   "files": [
-    "src",
     "lib"
   ],
   "main": "./lib/main/index.js",
