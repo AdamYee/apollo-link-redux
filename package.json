@@ -12,7 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/AdamYee/apollo-link-redux.git"
   },
+  "files": [
+    "src",
+    "lib"
+  ],
   "main": "./lib/index.js",
+  "module": "./src/index.js",
   "author": {
     "name": "Adam Yee",
     "email": "adamjyee@gmail.com"
@@ -24,11 +29,11 @@
     "prepublishOnly": "npm run clean && npm run build"
   },
   "dependencies": {
-    "apollo-utilities": "^1.0.2"
+    "apollo-utilities": "^1.0.0"
   },
   "peerDependencies": {
-    "apollo-link": "^1.0.3",
-    "graphql": "^0.11.7"
+    "apollo-link": "^1.0.0",
+    "graphql": "^0.11.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
