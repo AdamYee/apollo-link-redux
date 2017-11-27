@@ -16,8 +16,8 @@
     "src",
     "lib"
   ],
-  "main": "./lib/index.js",
-  "module": "./src/index.js",
+  "main": "./lib/main/index.js",
+  "module": "./src/module/index.js",
   "author": {
     "name": "Adam Yee",
     "email": "adamjyee@gmail.com"
@@ -25,7 +25,9 @@
   "license": "ISC",
   "scripts": {
     "clean": "rimraf lib/*",
-    "build": "babel src -d lib",
+    "build:main": "babel src -d lib/main --config-file ./babel.main.json",
+    "build:module": "babel src -d lib/module --config-file ./babel.module.json",
+    "build": "npm run build:main && npm run build:module",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "dependencies": {
@@ -36,9 +38,10 @@
     "graphql": "^0.11.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "@babel/cli": "^7.0.0-beta.32",
+    "@babel/core": "^7.0.0-beta.32",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.32",
+    "@babel/preset-env": "^7.0.0-beta.32",
     "rimraf": "^2.6.2"
   }
 }
