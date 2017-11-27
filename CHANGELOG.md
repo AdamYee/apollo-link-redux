@@ -1,5 +1,12 @@
 # apollo-link-redux CHANGELOG
 
+## 0.1.4
+
+* Whitelist using "files" instead of blacklist using .npmignore
+* Set "module" to src/index.js
+* Round down patch versions of dependencies and peerDependencies
+* Update README
+
 ## 0.1.3
 
 update README
