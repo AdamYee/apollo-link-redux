@@ -8,20 +8,22 @@
     "graphql",
     "redux"
   ],
+  "license": "ISC",
+  "author": {
+    "name": "Adam Yee",
+    "email": "adamjyee@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AdamYee/apollo-link-redux.git"
   },
+  "bugs": "https://github.com/AdamYee/apollo-link-redux/issues",
   "files": [
     "lib"
   ],
   "main": "./lib/main/index.js",
   "module": "./src/module/index.js",
-  "author": {
-    "name": "Adam Yee",
-    "email": "adamjyee@gmail.com"
-  },
-  "license": "ISC",
+  "browserslist": "> 1%",
   "scripts": {
     "clean": "rimraf lib/*",
     "build:main": "babel src -d lib/main --config-file ./babel.main.json",
