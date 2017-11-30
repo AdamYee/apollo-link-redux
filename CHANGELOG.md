@@ -1,5 +1,10 @@
 # apollo-link-redux CHANGELOG
 
+## 0.1.6
+
+* Refine babel build to use shippedProposals and import/require babel runtime instead of duplicating helpers
+* Update README with example usage and browser support
+
 ## 0.1.5
 
 * Correctly transpile ESM for `module` entry point
