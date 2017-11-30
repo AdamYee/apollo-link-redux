@@ -8,20 +8,22 @@
     "graphql",
     "redux"
   ],
+  "license": "ISC",
+  "author": {
+    "name": "Adam Yee",
+    "email": "adamjyee@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AdamYee/apollo-link-redux.git"
   },
+  "bugs": "https://github.com/AdamYee/apollo-link-redux/issues",
   "files": [
     "lib"
   ],
   "main": "./lib/main/index.js",
   "module": "./src/module/index.js",
-  "author": {
-    "name": "Adam Yee",
-    "email": "adamjyee@gmail.com"
-  },
-  "license": "ISC",
+  "browserslist": "> 1%",
   "scripts": {
     "clean": "rimraf lib/*",
     "build:main": "babel src -d lib/main --config-file ./babel.main.json",
@@ -30,6 +32,7 @@
     "prepublishOnly": "npm run clean && npm run build"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.32",
     "apollo-utilities": "^1.0.0"
   },
   "peerDependencies": {
@@ -40,6 +43,7 @@
     "@babel/cli": "^7.0.0-beta.32",
     "@babel/core": "^7.0.0-beta.32",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.32",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.32",
     "@babel/preset-env": "^7.0.0-beta.32",
     "rimraf": "^2.6.2"
   }
