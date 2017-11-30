@@ -23,13 +23,15 @@ APOLLO_MUTATION_RESULT
 All actions have `operationName`, `variables` and `document`.
 `*_RESULT` actions will also contain `result`.
 
-### Usage
+### Setup
+
 ```bash
 npm i -S apollo-link-redux
 ```
 
 ```javascript
 import { ApolloClient } from 'apollo-client';
+import { ApolloLink } from 'apollo-link';
 import ReduxLink from 'apollo-link-redux';
 import { HttpLink } from 'apollo-link-http';
 
@@ -39,4 +41,23 @@ const link = ApolloLink.from([
 ]);
 
 const client = new ApolloClient({ link });
+```
+
+### Example usage
+
+```javascript
+import { APOLLO_MUTATION_RESULT } from 'apollo-link-redux';
+
+export function mutationFooCounter(state = {
+  count: 0
+}, action) {
+  if (
+    action.operationName === 'MutateFoo' &&
+    action.type === APOLLO_MUTATION_RESULT
+  ) {
+    const count += 1;
+    return { count };
+  }
+  return state;
+}
 ```
