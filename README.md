@@ -61,3 +61,7 @@ export function mutationFooCounter(state = {
   return state;
 }
 ```
+
+### Support
+
+- [> 1%](http://browserl.ist/?q=%3E+1%25) market share browsers.
