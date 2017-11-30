@@ -32,6 +32,7 @@
     "prepublishOnly": "npm run clean && npm run build"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.32",
     "apollo-utilities": "^1.0.0"
   },
   "peerDependencies": {
@@ -42,6 +43,7 @@
     "@babel/cli": "^7.0.0-beta.32",
     "@babel/core": "^7.0.0-beta.32",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.32",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.32",
     "@babel/preset-env": "^7.0.0-beta.32",
     "rimraf": "^2.6.2"
   }
