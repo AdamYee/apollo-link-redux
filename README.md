@@ -55,7 +55,7 @@ export function mutationFooCounter(state = {
     action.operationName === 'MutateFoo' &&
     action.type === APOLLO_MUTATION_RESULT
   ) {
-    const count += 1;
+    const count = state.count + 1;
     return { count };
   }
   return state;
