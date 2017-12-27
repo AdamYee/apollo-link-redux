@@ -1,5 +1,9 @@
 # apollo-link-redux CHANGELOG
 
+## 0.1.7
+
+* Fix readme example
+
 ## 0.1.6
 
 * Refine babel build to use shippedProposals and import/require babel runtime instead of duplicating helpers
