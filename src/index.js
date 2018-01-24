@@ -1,5 +1,5 @@
-import {ApolloLink} from 'apollo-link';
-import {getMainDefinition} from 'apollo-utilities';
+import { ApolloLink } from 'apollo-link';
+import { getMainDefinition } from 'apollo-utilities';
 
 export const APOLLO_QUERY_INIT = 'APOLLO_QUERY_INIT';
 export const APOLLO_QUERY_RESULT = 'APOLLO_QUERY_RESULT';
