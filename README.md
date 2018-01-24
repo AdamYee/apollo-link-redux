@@ -19,6 +19,8 @@ APOLLO_QUERY_INIT
 APOLLO_QUERY_RESULT
 APOLLO_MUTATION_INIT
 APOLLO_MUTATION_RESULT
+APOLLO_SUBSCRIPTION_INIT
+APOLLO_SUBSCRIPTION_RESULT
 ```
 All actions have `operationName`, `variables` and `document`.
 `*_RESULT` actions will also contain `result`.
