@@ -1,5 +1,14 @@
 # apollo-link-redux CHANGELOG
 
+## 0.2.0
+
+New supported actions
+
+```
+APOLLO_SUBSCRIPTION_INIT
+APOLLO_SUBSCRIPTION_RESULT
+```
+
 ## 0.1.7
 
 * Fix readme example
