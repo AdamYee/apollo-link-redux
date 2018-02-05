@@ -18,46 +18,29 @@ const payload = ({
   document: query
 });
 
-export const queryInit = operation => {
-  return ({
-    type: APOLLO_QUERY_INIT,
-    ...payload(operation)
-  });
-};
+const initAction = type => operation => ({
+  type,
+  ...payload(operation)
+});
 
-export const queryResult = (result, operation) => ({
-  type: APOLLO_QUERY_RESULT,
+const resultAction = type => (result, operation) => ({
+  type,
   result,
   ...payload(operation)
 });
 
-export const mutationInit = operation => ({
-  type: APOLLO_MUTATION_INIT,
-  ...payload(operation)
-});
-
-export const mutationResult = (result, operation) => ({
-  type: APOLLO_MUTATION_RESULT,
-  result,
-  ...payload(operation)
-});
-
-export const subscriptionInit = operation => ({
-  type: APOLLO_SUBSCRIPTION_INIT,
-  ...payload(operation)
-});
-
-export const subscriptionResult = (result, operation) => ({
-  type: APOLLO_SUBSCRIPTION_RESULT,
-  result,
-  ...payload(operation)
-});
+export const queryInit = initAction(APOLLO_QUERY_INIT);
+export const queryResult = resultAction(APOLLO_QUERY_RESULT);
+export const mutationInit = initAction(APOLLO_MUTATION_INIT);
+export const mutationResult = resultAction(APOLLO_MUTATION_RESULT);
+export const subscriptionInit = initAction(APOLLO_SUBSCRIPTION_INIT);
+export const subscriptionResult = resultAction(APOLLO_SUBSCRIPTION_RESULT);
 
 const isQuery = op => op === 'query';
 const isMutation = op => op === 'mutation';
 const isSubscription = op => op === 'subscription';
 
-class ReduxLink extends ApolloLink {
+export class ReduxLink extends ApolloLink {
   /**
    * @param store - redux store
    */
@@ -67,7 +50,7 @@ class ReduxLink extends ApolloLink {
   }
   request(operation, forward) {
     const observer = forward(operation);
-    let definition = getMainDefinition(operation.query);
+    const definition = getMainDefinition(operation.query);
     if (isQuery(definition.operation)) {
       this.store.dispatch(queryInit(operation));
     }
