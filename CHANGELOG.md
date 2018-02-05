@@ -1,5 +1,9 @@
 # apollo-link-redux CHANGELOG
 
+## 0.2.1
+
+* Add a test for operationName
+
 ## 0.2.0
 
 New supported actions

@@ -31,6 +31,11 @@ All actions have `operationName`, `variables` and `document`.
 npm i -S apollo-link-redux
 ```
 
+(peer dependencies)
+```bash
+npm i -S apollo-link graphql
+```
+
 ```javascript
 import { ApolloClient } from 'apollo-client';
 import { ApolloLink } from 'apollo-link';
@@ -62,6 +67,12 @@ export function mutationFooCounter(state = {
   }
   return state;
 }
+```
+
+### Tests
+
+```bash
+npm test
 ```
 
 ### Support
