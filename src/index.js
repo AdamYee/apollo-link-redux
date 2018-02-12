@@ -59,6 +59,7 @@ export class ReduxLink extends ApolloLink {
     }
     else if (isSubscription(definition.operation)) {
       this.store.dispatch(subscriptionInit(operation));
+      return observer;
     }
     return observer.map(result => {
       if (isQuery(definition.operation)) {
